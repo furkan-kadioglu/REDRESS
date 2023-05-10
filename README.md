@@ -1,5 +1,5 @@
 # REDRESS
-Open-source code for ''Individual Fairness for Graph Neural Networks: A Ranking based Approach''.
+Open-source code for ''Individual Fairness for Graph Neural Networks: A Ranking based Approach''
 
 ## Citation
 
