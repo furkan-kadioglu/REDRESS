@@ -19,7 +19,7 @@ from scipy.sparse import csr_matrix
 
 
 import networkx as nx
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
 
 
 
@@ -31,7 +31,7 @@ parser.add_argument('--hidden1', type=int, default=32, help='Number of units in 
 parser.add_argument('--hidden2', type=int, default=16, help='Number of units in hidden layer 2.')
 parser.add_argument('--lr', type=float, default=0.01, help='Initial learning rate.')
 parser.add_argument('--dropout', type=float, default=0., help='Dropout rate (1 - keep probability).')
-parser.add_argument('--dataset-str', type=str, default='BlogCatalog', help='type of dataset.')
+parser.add_argument('--dataset', type=str, default='BlogCatalog', help='type of dataset.')
 
 args = parser.parse_args()
 
@@ -205,7 +205,12 @@ def train_fair(top_k, epoch, model, optimizer, features, adj_norm, embedding):
 
 
 
-dataset = "BlogCatalog"  # ["BlogCatalog", "facebook", "Flickr"]
+# dataset = "BlogCatalog"  # ["BlogCatalog", "facebook", "Flickr"] 
+dataset = args.dataset
+
+dataset = args.dataset
+
+
 lambdas_para = 1
 k_para = 1
 sigma_1 = -1

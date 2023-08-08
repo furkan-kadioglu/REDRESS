@@ -14,7 +14,7 @@ from data_loader.structural_utils import load_data2, load_npz
 from numpy import *
 import scipy.sparse as sp
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
 
 # Arguments
 args = get_citation_args()
@@ -319,8 +319,12 @@ def test():
 
 
 
-dataset = "ACM"  # ["ACM", "coauthor-cs", "coauthor-phy"]
-model_name = "SGC"  # ['SGC', 'GCN']
+# dataset = "ACM"  # ["ACM", "coauthor-cs", "coauthor-phy"]
+# model_name = "SGC"  # ['SGC', 'GCN']
+
+dataset = args.dataset
+model_name = args.model
+
 all_ndcg_list_test = []
 lambdas_para = 1
 k_para = 1

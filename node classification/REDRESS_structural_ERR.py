@@ -328,8 +328,12 @@ def test():
 
 
 
-dataset = "ACM"  # ["ACM", "coauthor-cs", "coauthor-phy"]
-model_name = "SGC"  # ['SGC', 'GCN']
+# dataset = "ACM"  # ["ACM", "coauthor-cs", "coauthor-phy"]
+# model_name = "SGC"  # ['SGC', 'GCN']
+
+dataset = args.dataset
+model_name = args.model
+
 all_ndcg_list_test = []
 lambdas_para = 1
 k_para = 1
